@@ -34,6 +34,7 @@ cc_library(
         "-DNO_CACHING",
         "-DNO_SSL",
         "-DNO_FILES",
+        "-D_WIN32_WINNT=0x0502",  # Targeting older Windows to avoid conflicting pollfd definition
         "-UDEBUG",
     ],
     includes = [
